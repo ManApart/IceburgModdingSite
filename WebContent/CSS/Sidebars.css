@@ -1,0 +1,91 @@
+.blue-box{
+	background-color: #5c9df2;
+	padding: 5px;
+	width: 120%;
+
+	margin-bottom: 15px;
+	border-radius: 5px;
+	color: white;
+}
+.blue-box:hover{
+	background-color: #3a6297;
+	transform: scale(1.2);
+}
+/* .blue-box table:hover{ */
+/* 	transform: scale(1.2); */
+/* } */
+
+.contact-section{
+	position: fixed;
+	top: 20%;
+	right: 0;
+	width: 200px;
+	z-index: 999;
+}
+.navBar-section{
+	position: fixed;
+	top: 20%;
+	width: 200px;
+	left: -25px;
+	z-index: 999;
+	text-align: center;
+}
+
+/* Animation classes */
+.hidden-right-mostly{
+	animation: 0.5s slideOutRightMostly;
+	animation-fill-mode: forwards;
+}
+.unhidden-right-mostly{
+	animation: 0.5s slideInRightMostly;
+}
+
+.hidden-right{
+	animation: 1s slideOutRight;
+	animation-fill-mode: forwards;
+}
+.unhidden-right{
+	animation: 0.7s slideInRight;
+}
+.hidden-right2{
+	animation: 1.1s slideOutRight;
+	animation-fill-mode: forwards;
+}
+.unhidden-right2{
+/* 	Start this guy to the right, so he doesn't appear till after the delay */
+	animation: 0.9s slideInRight;
+}
+/* Left animation classes */
+.hidden-left-mostly{
+	animation: 0.5s slideOutLeftMostly;
+	animation-fill-mode: forwards;
+	text-align: right;
+}
+.unhidden-left-mostly{
+/* 	Make the menu title disapear when the menu itself is expanded */
+	animation: 0.5s slideOutLeftCompletely;	
+	animation-fill-mode: forwards;
+}
+
+.hidden-left{
+	animation: 1s slideOutLeft;
+	animation-fill-mode: forwards;
+/* 	display:none; */
+}
+.unhidden-left{
+	animation: 0.7s slideInLeft;
+}
+
+
+
+a, a:visited, a:hover, a:active{
+	color: inherit;
+}
+
+a:visited{
+	background-color: black;
+}
+
+
+
+

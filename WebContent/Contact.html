@@ -1,0 +1,29 @@
+<section id="contact" ng-controller="contactController as contact" class="contact-section">
+<!-- <section id="contact" ng-controller="contactController as contact" class="contact-section navbar-fixed-top"> -->
+<!-- 	Contact Page: {{contact.tester}} -->
+	<div class="blue-box" ng-class="{ 'hidden-right-mostly': !contact.showMenu, 'unhidden-right-mostly': contact.showMenu }">
+		<div style="padding-left: 10px;" >Links </div>
+	</div>
+	<div id="follow" class="blue-box" ng-class="{ 'hidden-right2': !contact.showMenu, 'unhidden-right2': contact.showMenu }">
+		<table>
+		<tr>
+			<td style="width: 30px; height: 30px;"><img src="Images/facebook.png" alt="Facebook" class="image-social-media"></td>		
+			<td><a href="https://www.facebook.com/IceburgModding" target="_blank">Facebook</a></td>
+		</tr>
+		<tr>
+			<td style="height: 30px;"><img src="Images/nexus.png" alt="Nexus Mods" class="image-social-media"></td>
+			<td><a href="http://www.nexusmods.com/games/users/1398716/?tb=mods&pUp=1" target="_blank">Nexus Mods</a></td>
+		</tr>
+		</table>
+	</div>
+	
+	<script>
+	
+		$("#contact").mouseenter(function(){
+			contactCtrl.toggleMenu();
+		});
+		$("#contact").mouseleave(function(){
+			contactCtrl.toggleMenu();
+		});
+	</script>
+</section>

@@ -1,0 +1,45 @@
+<section ng-controller="modsController">
+	<div id="mods" class="container">
+		<h1 class="title" style="margin-bottom: 50px;">Iceburg Modding</h1>
+	</div>
+	<div class="container" style="width: 90%;">
+		<div id="modStats">
+			<div class="row">
+				<div class="col-sm-3" style=" padding: 0px;">
+	<!-- 				Hover for detail! -->
+					<div id="modStatOverlays">
+						<h3 class="mod-label" style="text-align: right; animation-delay: 2s; padding-top: 50px;">Nearly 30 mods</h3>
+						<h3 class="mod-label" style="text-align: right; animation-delay: 3s; padding-top: 50px; padding-right: 50px;">Downloaded over <br/>390,000 times</h3>
+					</div>
+				</div>
+				<div class="col-sm-6" style=" padding: 0px;">
+					<canvas id="modChart">It would seem that your browser does not support Canvas components. =/</canvas>
+				</div>
+				<div class="col-sm-3" style=" padding: 0px;">
+					<div ng-hide="stats.index == -1" style="padding-top: 50px;">
+	<!-- 					{{stats.index}} -->
+						<h3>{{stats.names[stats.index]}}</h3>
+						<br/> <h4>Downloaded {{stats.numbers[stats.index] | number}} times</h4>
+					</div>
+					<div ng-hide="stats.index != -1" style="padding-top: 50px;">
+						<h4 class="mod-label" style="color: gray; animation-delay: 4s;">Hover over the chart for detail!</h4>					
+					</div>
+				</div>
+			</div>
+		
+		</div>
+		
+	
+		<div class="row">
+			<div ng-repeat="mod in mods" class="col-sm-4" style="height: 400px;">		
+				<div class="mod-pic" ng-style="{'background-image':'url('+mod.picture+')'}">
+					<div class="mod-pic-foreground">
+						<h3 style="padding: 5% 5% 0 5%;">{{mod.title}}</h3>
+						<div style="padding: 0 5% 0 5%;" ng-bind-html="mod.description"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+		
+</section>
